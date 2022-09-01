@@ -1,14 +1,33 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "nodemon server/index.js",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
     "next": "latest",
+    "nodemon": "^2.0.19",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-icons": "^4.4.0",
+    "react-toastify": "^9.0.8",
+    "toastify": "^2.0.1",
+    "uuid": "^8.3.2",
+    "web3.storage": "^4.4.0"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
