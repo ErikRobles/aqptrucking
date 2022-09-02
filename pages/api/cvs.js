@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { File, Web3Storage } = require('web3.storage');
 
-const CV = require('./../server/models/cvModel');
+const CV = require('../../server/models/cvModel');
 
 const w3storage = new Web3Storage({ token: process.env.WEB3_STORAGE_TOKEN });
 
