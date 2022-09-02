@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 // import user model
-const User = require('./models/userModel');
+const User = require('./models/userModel.js');
 
 export default function handler(req, res) {
   // @desc Register a new user
