@@ -3,6 +3,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
 
+// eliminate double toast
 const customId = 'custom-toast-id';
 
 function Admin() {
