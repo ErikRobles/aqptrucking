@@ -2,7 +2,8 @@ const asyncHandler = require('express-async-handler');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const User = require('../../server/models/userModel');
+// import user model
+const User = require('./../server/models/userModel');
 
 export default function handler(req, res) {
   // @desc Register a new user
