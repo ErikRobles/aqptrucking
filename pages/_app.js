@@ -6,8 +6,6 @@ import { AuthContextProvider } from '../context/AuthContext';
 import { CVContextProvider } from '../context/CVContext';
 
 function MyApp({ Component, pageProps }) {
-  // console.log(user);
-
   return (
     <>
       <AuthContextProvider>
