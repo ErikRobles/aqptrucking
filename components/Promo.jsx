@@ -23,6 +23,7 @@ function Promo({ promoheading, promomessage }) {
             {/* <button className='px-8 py-2 border rounded-lg bg-[#00388d] text-white mb-3 mt-3 hover:bg-[#cb010d]  shadow-md'>
               Find out more.
             </button> */}
+            {/* Can be replaced by this button or any other. */}
             <CVForm />
           </div>
         </div>
