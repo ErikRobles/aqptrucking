@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const { v4: uuidv4 } = require('uuid');
+import { Schema, model, models } from 'mongoose';
+import { v4 as uuidv4 } from 'uuid';
 
-const cvSchema = mongoose.Schema(
+const cvSchema = new Schema(
   {
     _id: {
       type: String,
@@ -23,10 +23,10 @@ const cvSchema = mongoose.Schema(
       type: String,
       required: [true, 'Please Add a Phone Number'],
     },
-    cvfile: {
-      data: Buffer,
-      contentType: String,
-    },
+    // cvfile: {
+    //   data: Buffer,
+    //   contentType: String,
+    // },
     fileUrl: {
       type: String,
     },
@@ -55,4 +55,5 @@ const cvSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('CV', cvSchema);
+const CV = models.CV || model('CV', cvSchema);
+export default CV;

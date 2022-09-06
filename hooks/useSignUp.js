@@ -20,7 +20,7 @@ export const useSignUp = () => {
 
   const { dispatch } = useAuthContext();
 
-  const API_URL = '/api/users';
+  const API_URL = '/api/users/register';
 
   const signup = async (formData) => {
     setLoading(true);

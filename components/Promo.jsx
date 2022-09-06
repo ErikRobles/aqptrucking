@@ -20,9 +20,10 @@ function Promo({ promoheading, promomessage }) {
               elit. Deleniti quam quia incidunt pariatur? Atque saepe numquam
               accusantium unde harum. Iste, qui fugiat!
             </p>
-            <button className='px-8 py-2 border rounded-lg bg-[#00388d] text-white mb-3 mt-3 hover:bg-[#cb010d]  shadow-md'>
+            {/* <button className='px-8 py-2 border rounded-lg bg-[#00388d] text-white mb-3 mt-3 hover:bg-[#cb010d]  shadow-md'>
               Find out more.
-            </button>
+            </button> */}
+            <CVForm />
           </div>
         </div>
       </div>

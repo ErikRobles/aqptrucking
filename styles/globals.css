@@ -33,7 +33,7 @@ html {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #5651e5 transparent #5651e5 transparent;
+  border-color: #d2000a transparent #00388d transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }

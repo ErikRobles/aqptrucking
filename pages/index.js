@@ -27,7 +27,12 @@ export default function Home() {
         promoheading='Promo'
         promomessage='This is our promotional message or sub-heading.'
       />
-      <CVForm />
+      {/* <CVForm /> */}
+      <div className='flex flex-row justify-center text-center my-[60px] mx-auto'>
+        <h1 className='text-lg font-bold'>
+          <em>"Additional Sections once AQP Trucking provides more info"</em>
+        </h1>
+      </div>
       <Footer />
     </div>
   );

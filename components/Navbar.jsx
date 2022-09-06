@@ -110,7 +110,7 @@ const Navbar = () => {
             </a>
           </Link>
         </li>
-        {user?.isAdmin && (
+        {user && (
           <>
             <li
               className='cursor-pointer hover:bg-white hover:text-gray-900 w-[100%] ml-auto p-2 rounded-lg transition-all'
@@ -122,17 +122,19 @@ const Navbar = () => {
                 </a>
               </Link>
             </li>
+            {user?.isAdmin && (
+              <li
+                className='cursor-pointer hover:bg-white hover:text-gray-900 w-[100%] ml-auto p-2 rounded-lg transition-all'
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <Link href='/admin'>
+                  <a>
+                    <FaLock className='inline' /> Admin
+                  </a>
+                </Link>
+              </li>
+            )}
 
-            <li
-              className='cursor-pointer hover:bg-white hover:text-gray-900 w-[100%] ml-auto p-2 rounded-lg transition-all'
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <Link href='/admin'>
-                <a>
-                  <FaLock className='inline' /> Admin
-                </a>
-              </Link>
-            </li>
             <li
               className='cursor-pointer hover:bg-white hover:text-gray-900 w-[100%] ml-auto p-2 rounded-lg transition-all'
               onClick={() => setIsOpen(!isOpen)}

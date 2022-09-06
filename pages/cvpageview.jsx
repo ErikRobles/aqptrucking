@@ -10,7 +10,8 @@ function CvPageView() {
 
   const cvShouldRun = useRef(true);
 
-  const API_URL = '/api/cvs';
+  const API_URL = '/api/cvs/viewcvs';
+  const API_URL_DELETE = '/api/cvs/deletecv/';
 
   useEffect(() => {
     if (cvShouldRun.current) {
@@ -35,15 +36,12 @@ function CvPageView() {
   const handleDelete = async (id) => {
     // ajax request to delete mongodb record
     try {
-      const response = await axios.delete(`${API_URL}/${id}`);
-      console.log(response.data);
-      if (response.data.success) {
+      const response = await axios.delete(`${API_URL_DELETE}?id=${id}`);
+      const data = await response.data;
+      if (data.success) {
         dispatch({ type: 'DELETE_CV', payload: id });
         toast.success('CV deleted successfully');
-      } else {
-        toast.error('Something Went Afoul');
       }
-      return response.data;
     } catch (err) {
       console.log(err);
       toast.error(err.message);

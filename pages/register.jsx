@@ -39,8 +39,6 @@ function Register() {
     }
   }, []);
 
-  const API_URL = 'http://localhost:5000/api/users';
-
   const submitRegistration = async (e) => {
     e.preventDefault();
     if (password !== password2) {

@@ -11,7 +11,7 @@ export const useSubmitCV = () => {
 
   // const { dispatch } = useCVContext();
 
-  const API_URL = '/api/cvs';
+  const API_URL = '/api/cvs/addcv';
 
   const submitcv = async (formData) => {
     setLoading(true);
@@ -22,7 +22,6 @@ export const useSubmitCV = () => {
     form.append('email', formData.email);
     form.append('phone', formData.phone);
     form.append('cvfile', formData.cvfile);
-    form.append('fileUrl', formData.fileUrl);
     form.append('address', formData.address);
     form.append('city', formData.city);
     form.append('state', formData.state);
