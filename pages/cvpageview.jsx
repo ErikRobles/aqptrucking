@@ -102,7 +102,7 @@ function CvPageView() {
                 </tr>
               </thead>
               <tbody>
-                {cvs.map((cv) => (
+                {cvs?.map((cv) => (
                   <tr
                     className='bg-white border-b dark:bg-gray-800 dark:border-gray-700'
                     key={cv._id}
