@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Truck1 from '../assets/truck1.jpg';
+import Truck1 from '../assets/two-trucks.jpeg';
 
 function Info({ infoheading, infomessage }) {
   return (
