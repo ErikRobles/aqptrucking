@@ -3,8 +3,8 @@ import CVForm from './CVForm';
 
 function Promo({ promoheading, promomessage }) {
   return (
-    <div className='w-full h-screen mb-[30px]  bg-white pb-[120px] pt-[5px] px-2 flex flex-col justify-evenly'>
-      <div className='mt-4 text-center'>
+    <div className='w-full h-full bg-white pt-8 pb-[120px] px-2 flex flex-col justify-evenly'>
+      <div className='text-center'>
         <h1 className='text-2xl font-bold text-gray-600 uppercase'>
           {promoheading}
         </h1>
@@ -28,8 +28,8 @@ function Promo({ promoheading, promomessage }) {
           </div>
         </div>
       </div>
-      <div className='md:hidden mx-auto w-[90%] min-h-[250px] mb-[-175px] cancun-img bg-center bg-cover h-[900px] rounded-lg'></div>
-      <div className='md:hidden mx-auto w-[90%] bg-gray-200 p-6 rounded-lg rounded-t-none mb-[-75px]'>
+      <div className='md:hidden mx-auto w-[90%] min-h-[350px] mb-[-175px] cancun-img bg-center bg-cover h-[350px] rounded-lg'></div>
+      <div className='md:hidden mx-auto w-[90%] bg-gray-200 p-6 rounded-lg rounded-t-none mb-[-100px]'>
         <div className='flex flex-col justify-evenly space-y-4'>
           <h3 className='text-2xl'>Card Header</h3>
           <h2 className='text-xl'>Card SubHeading</h2>
