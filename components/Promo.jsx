@@ -28,8 +28,8 @@ function Promo({ promoheading, promomessage }) {
           </div>
         </div>
       </div>
-      <div className='md:hidden mx-auto w-[90%] min-h-[250px] mb-[-50px] cancun-img bg-center bg-cover h-[700px] rounded-lg'></div>
-      <div className='md:hidden mx-auto w-[90%] bg-gray-200 p-6 rounded-lg rounded-t-none'>
+      <div className='md:hidden mx-auto w-[90%] min-h-[250px] mb-[-175px] cancun-img bg-center bg-cover h-[900px] rounded-lg'></div>
+      <div className='md:hidden mx-auto w-[90%] bg-gray-200 p-6 rounded-lg rounded-t-none mb-[-75px]'>
         <div className='flex flex-col justify-evenly space-y-4'>
           <h3 className='text-2xl'>Card Header</h3>
           <h2 className='text-xl'>Card SubHeading</h2>
