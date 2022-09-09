@@ -38,7 +38,13 @@ const Navbar = () => {
       <div className='flex flex-row gap-x-4 items-center justify-between h-full pt-2'>
         <Link href='/'>
           <a>
-            <Image src={Logo} width='150px' height='100px' alt='logo' />
+            <Image
+              priority
+              src={Logo}
+              width='150px'
+              height='100px'
+              alt='logo'
+            />
           </a>
         </Link>
         <ul className='hidden md:flex'>

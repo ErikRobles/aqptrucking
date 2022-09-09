@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import Info from '../components/Info';
 import Promo from '../components/Promo';
+import NextSection from './next-section';
 
 export default function Home() {
   return (
@@ -31,11 +32,7 @@ export default function Home() {
         promomessage='This is our promotional message or sub-heading.'
       />
       {/* <CVForm /> */}
-      <div className='flex flex-row justify-center text-center my-[60px] mx-auto'>
-        <h1 className='text-lg font-bold'>
-          <em>"Additional Sections once AQP Trucking provides more info"</em>
-        </h1>
-      </div>
+      <NextSection />
       <Footer />
     </div>
   );
