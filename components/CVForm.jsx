@@ -88,7 +88,7 @@ function CVForm() {
         <div>
           {/* This is a dialog for adding a CV */}
           <button
-            className="mb-[30px] btn btn-primary bg-gradient-to-br from-[#00388d] via-[#592057] to-[#d2000a] hover:bg-gradient-to-bl from-[#00388d] via-[#592057] to-[#d2000a] text-white rounded-lg px-4 py-2 uppercase shadow-lg"
+            className="mb-[10px] btn btn-primary bg-gradient-to-br from-[#00388d] via-[#592057] to-[#d2000a] hover:bg-gradient-to-bl from-[#00388d] via-[#592057] to-[#d2000a] text-white rounded-lg px-4 py-2 uppercase shadow-lg"
             onClick={openButton}
           >
             {buttonText}

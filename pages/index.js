@@ -24,8 +24,8 @@ export default function Home() {
         message="A world of discovery as you hit the open road in this fulfilling and important career."
       />
       <Promo
-        promoheading="Promo"
-        promomessage="This is our promotional message or sub-heading."
+        promoheading="Yearly Trip to Cancún"
+        // promomessage="This is our promotional message or sub-heading."
       />
       <Info
         infoheading="This Heading Describes Just How Awesome it is To Drive With Us!"
