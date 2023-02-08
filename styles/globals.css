@@ -4,16 +4,20 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: #e5e7eb;
 }
 
 .custom-img {
-  background-image: url('../assets/truck1.jpeg');
+  background-image: url("../assets/truck1.jpeg");
 }
 
 .cancun-img {
-  background-image: url('../assets/cancun.jpg');
+  background-image: url("../assets/cancun.jpg");
+}
+
+.beach-img {
+  background-image: url("../assets/beach.jpeg");
 }
 
 .loadingSpinnerContainer {
