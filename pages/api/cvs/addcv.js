@@ -1,11 +1,14 @@
-import nextConnect from 'next-connect';
-import multer from 'multer';
-import path from 'path';
-import connectDB from '../../../config/db';
+import nextConnect from "next-connect";
+import multer from "multer";
+import path from "path";
+import connectDB from "../../../config/db";
+import { createTransport } from "nodemailer";
+import smtpTransport from "nodemailer-smtp-transport";
+import nodemailer from "nodemailer";
 
-import { File, Web3Storage } from 'web3.storage';
+import { File, Web3Storage } from "web3.storage";
 
-import CV from '../../../models/cvModel';
+import CV from "../../../models/cvModel";
 
 export const config = {
   api: {
@@ -26,7 +29,7 @@ function checkFileType(file, cb) {
   if (mimetype && extname) {
     return cb(null, true);
   } else {
-    cb('Error: Documents Only!');
+    cb("Error: Documents Only!");
   }
 }
 
@@ -50,7 +53,7 @@ const createCV = nextConnect({
     res.status(405).json({ error: `Method '${req.method}' Not Allowed` });
   },
 })
-  .use(upload.single('cvfile'))
+  .use(upload.single("cvfile"))
   .post(async (req, res) => {
     // @desc Create a new cv
     // @route POST /api/cvs/addcv
@@ -74,8 +77,16 @@ const createCV = nextConnect({
 
       console.log(req.body, req.file);
 
-      const newFile = new File([req.file.buffer], req.file.originalname);
-      const cid = await w3storage.put([newFile]);
+      let cid = null;
+
+      if(req?.file) {
+        const newFile = new File([req.file.buffer], req.file.originalname);
+         cid = await w3storage.put([newFile]);
+      }
+
+      // const newFile = new File([req.file.buffer], req.file.originalname);
+      // const cid = await w3storage.put([newFile]);
+      
 
       const cv = await CV.create({
         firstName,
@@ -89,9 +100,41 @@ const createCV = nextConnect({
         usEligible,
         dob,
         description,
-        fileUrl: `https://${cid}.ipfs.dweb.link/${req.file.originalname}`,
+        fileUrl: cid
+          ? `https://${cid}.ipfs.dweb.link/${req.file.originalname} `
+          : null,
       });
 
+      // Create a nodemailer transport using SMTP
+      const transport = nodemailer.createTransport(
+        smtpTransport({
+          host: process.env.SMTP_HOST,
+          port: process.env.SMTP_PORT,
+          secure: false,
+          auth: {
+            user: process.env.SMTP_EMAIL,
+            pass: process.env.SMTP_PASSWORD,
+          },
+        })
+      );
+      // Create an email message
+      const message = {
+        from: process.env.EMAIL,
+        to: process.env.EMAIL,
+        subject: "New form submission",
+        text: JSON.stringify(cv, null, 2),
+      };
+
+      // Send the email
+      transport.sendMail(message, (err, info) => {
+        if (err) {
+          console.log("Error occurred. " + err.message);
+          res.status(500).send("Error Sending email");
+        } else {
+          console.log(info);
+          res.status(200).send("Email sent successfully");
+        }
+      });
       return res.status(201).json(cv);
 
       // res.status(201).json({ body: req.body, file: req.file });

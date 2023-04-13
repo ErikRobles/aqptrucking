@@ -11,7 +11,7 @@ function CVForm() {
     phone: "",
     cvfile: "",
     address: "",
-    usEligible: "",
+    usEligible: "yes",
     city: "",
     state: "",
     zip: "",
@@ -171,7 +171,7 @@ function CVForm() {
                             type="text"
                             name="phone"
                             onChange={onChange}
-                            placeholder="123-1234-567"
+                            placeholder="123-123-4567"
                             required
                             className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
                           />
@@ -251,7 +251,7 @@ function CVForm() {
                               Upload Resume
                             </label>
                             <input
-                              className="block w-full text-sm text-white bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-white focus:outline-none dark:bg-[#00388d] dark:border-gray-600 dark:placeholder-white"
+                              className="block w-full text-sm text-slate-700 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-white focus:outline-none dark:bg-[#00388d] dark:border-gray-600 dark:placeholder-white"
                               id="cvfile"
                               type="file"
                               filename="cvfile"
@@ -284,7 +284,7 @@ function CVForm() {
                                 name="usEligible"
                                 className="border border-gray-300 text-gray-500 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 onChange={onChange}
-                                value="yes"
+                                defaultValue="yes"
                               >
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -332,9 +332,12 @@ function CVForm() {
                               </label>
                               <select
                                 id="state"
+                                name="state"
                                 className="border border-gray-300 text-gray-400 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                onChange={onChange}
+                                defaultValue="Choose a State"
                               >
-                                <option disabled>Choose a State</option>
+                                <option value="" disabled>Choose a State</option>
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AZ">Arizona</option>
@@ -432,7 +435,7 @@ function CVForm() {
 
                               <textarea
                                 rows="5"
-                                name="message"
+                                name="description"
                                 placeholder="Your Message"
                                 className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
                                 onChange={onChange}

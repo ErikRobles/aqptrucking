@@ -115,7 +115,7 @@ function CvPageView() {
                     <td className='py-4 px-6'>
                       {cv.fileUrl ? (
                         <a
-                          className='text-gray-400 underline hover:text-white hover:font-bold transition-all duration-300'
+                          className='text-gray-400 underline hover:text-[#073689] hover:font-bold transition-all duration-300'
                           href={`${cv.fileUrl}`}
                           target='_blank'
                           rel='noreferrer'
