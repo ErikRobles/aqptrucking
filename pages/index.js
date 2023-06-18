@@ -28,8 +28,8 @@ export default function Home() {
         // promomessage="This is our promotional message or sub-heading."
       />
       <Info
-        infoheading="This Heading Describes Just How Awesome it is To Drive With Us!"
-        infomessage="So much information that will wow you, how can we possibly put it into this small paragraph. But we will try."
+        infoheading="Find out Just How Awesome it is To Drive With Us!"
+        infomessage="Click the button below and fill out the application and start your journey on the path to Trucking Success!"
       />
 
       {/* <CVForm /> */}

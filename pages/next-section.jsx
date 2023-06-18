@@ -5,7 +5,7 @@ const NextSection = () => {
     <div className='mt-4'>
       <div className='flex flex-row justify-center text-center my-[60px] mx-auto'>
         <h1 className='text-lg font-bold'>
-          <em>"Additional Sections once AQP Trucking provides more info"</em>
+          <em>"Keep Coming back and check out our AQP Trucking promos."</em>
         </h1>
       </div>
     </div>

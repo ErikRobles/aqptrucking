@@ -1,6 +1,8 @@
 import React from "react"
 import Image from "next/image"
 import Truck1 from "../assets/two-trucks.jpeg"
+import CVForm from "./CVForm"
+
 
 function Info({ infoheading, infomessage }) {
   return (
@@ -20,9 +22,10 @@ function Info({ infoheading, infomessage }) {
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {infomessage}
           </p>
-          <button className="px-8 py-2 border bg-[#cb010d] rounded-lg mb-3 mt-3 hover:bg-[#00388d] text-white shadow-md">
+          {/* <button className="px-8 py-2 border bg-[#cb010d] rounded-lg mb-3 mt-3 hover:bg-[#00388d] text-white shadow-md">
             Find out more.
-          </button>
+          </button> */}
+          <CVForm />
         </div>
       </div>
     </div>

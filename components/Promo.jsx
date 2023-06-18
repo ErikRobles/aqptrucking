@@ -3,7 +3,7 @@ import CVForm from "./CVForm"
 
 function Promo({ promoheading, promomessage }) {
   return (
-    <div className="w-full h-full bg-white pt-8 pb-[120px] px-2 flex flex-col justify-evenly">
+    <div className="w-full h-full bg-white pt-12 pb-[120px] px-2 flex flex-col justify-evenly">
       <div className="text-center">
         <h1 className="text-2xl font-bold text-gray-600 uppercase">
           {promoheading}
